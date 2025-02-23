@@ -1,26 +1,61 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { IoMdCall } from "react-icons/io";
+import { IoMenu, IoClose } from "react-icons/io5";
 
 const Nav = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
-        <div className='fixed h-20 w-full bg-customGreen text-white flex items-center justify-center z-20 overflow-hidden'>
-            <div className='left w-[75%] h-[100%] px-48 items-center justify-start flex gap-14'>
-                <Link href={'/'} className='text-3xl font-bold leading-3 tracking-wide'>Aqua</Link>
-                <h1 className='text-xl font-semibold '>Buy</h1>
-                <h1 className='text-xl font-semibold '>Refinance</h1>
-                <h1 className='text-xl font-semibold '>Rates</h1>
-                <h1 className='text-xl font-semibold '>Aqua+</h1>
-                <Link href={'/about'} className='text-xl font-semibold'>About us</Link>
-            </div>
-            <div className='right w-[50%] h-[100%]  px-52 items-center justify-end flex gap-14'>
-                <Link href={''} className='text-xl font-semibold border-white border-[1.5px] flex items-center justify-center px-3 py-3 rounded-full'><IoMdCall /></Link>
-                <h1 className='text-xl font-semibold'>Sign in</h1>
-                <Link href={''} className='text-lg tracking-wide border-customGreen2 bg-customGreen2 border-[1.5px] flex items-center justify-center px-5 py-3 rounded-full'>Continue</Link>
-            </div>
+      <div className='fixed h-20 w-full bg-customGreen text-white flex items-center justify-between px-6 md:px-12 lg:px-48 z-20'>
+        {/* Logo */}
+        <Link href={'/'} className='text-3xl font-bold tracking-wide'>Aqua</Link>
+
+        {/* Desktop Menu */}
+        <div className='hidden md:flex items-center gap-8'>
+          <Link href={'#'} className='text-lg font-semibold'>Buy</Link>
+          <Link href={'#'} className='text-lg font-semibold'>Refinance</Link>
+          <Link href={'#'} className='text-lg font-semibold'>Rates</Link>
+          <Link href={'#'} className='text-lg font-semibold'>Aqua+</Link>
+          <Link href={'/about'} className='text-lg font-semibold'>About us</Link>
         </div>
+
+        {/* Right Side */}
+        <div className='hidden md:flex items-center gap-6'>
+          <Link href={'#'} className='text-xl border-white border-[1.5px] p-2 rounded-full flex items-center justify-center'>
+            <IoMdCall />
+          </Link>
+          <Link href={'#'} className='text-lg font-semibold'>Sign in</Link>
+          <Link href={'#'} className='text-lg bg-customGreen2 border-customGreen2 border-[1.5px] px-5 py-2 rounded-full'>
+            Continue
+          </Link>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button className='md:hidden text-3xl' onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <IoClose /> : <IoMenu />}
+        </button>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      {menuOpen && (
+        <div className='absolute top-20 left-0 w-full bg-customGreen text-white flex flex-col items-center gap-5 py-6 md:hidden'>
+          <Link href={'#'} className='text-lg font-semibold'>Buy</Link>
+          <Link href={'#'} className='text-lg font-semibold'>Refinance</Link>
+          <Link href={'#'} className='text-lg font-semibold'>Rates</Link>
+          <Link href={'#'} className='text-lg font-semibold'>Aqua+</Link>
+          <Link href={'/about'} className='text-lg font-semibold'>About us</Link>
+          <Link href={'#'} className='text-xl border-white border-[1.5px] p-2 rounded-full flex items-center justify-center'>
+            <IoMdCall />
+          </Link>
+          <Link href={'#'} className='text-lg font-semibold'>Sign in</Link>
+          <Link href={'#'} className='text-lg bg-customGreen2 border-customGreen2 border-[1.5px] px-5 py-2 rounded-full'>
+            Continue
+          </Link>
+        </div>
+      )}
     </>
   )
 }
