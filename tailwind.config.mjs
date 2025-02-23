@@ -10,6 +10,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customGreen: "#004733",
+        customGreen2: "#1EE07F",
       },
     },
   },
