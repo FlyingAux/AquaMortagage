@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <div className="w-full border-t border-gray-400 bg-white">
       
-      {/* Main Content */}
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-12 lg:px-24 py-16">
-        {/* Aqua Section */}
+
         <div>
           <h1 className="text-3xl font-bold text-customGreen2">Aqua</h1>
           <p className="text-gray-700 mt-4">Aqua is a family of companies serving all your homeownership needs.</p>
@@ -29,7 +29,7 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Resources Section */}
+
         <div>
           <h1 className="text-xl font-bold">Resources</h1>
           {["Home affordability calculator", "Mortgage calculator", "Rent vs buy calculator", "HELOC payment calculator", "Buy a home", "Sell a home", "Get home inspection"].map((item, index) => (
@@ -37,7 +37,7 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Company Section */}
+
         <div>
           <h1 className="text-xl font-bold">Company</h1>
           {["About Us", "Careers", "Media", "Partner With Us", "Learning center", "FAQs", "Investor Relations"].map((item, index) => (
@@ -45,7 +45,7 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Contact & Legal Section */}
+
         <div>
           <h1 className="text-xl font-bold">Contact Us</h1>
           <p className="text-gray-700 mt-2 text-sm">hello@aqua.com</p>
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Social Icons */}
+  
       <div className="flex justify-center items-center gap-6 text-2xl py-6 border-t border-gray-300">
         <FaInstagram className="cursor-pointer hover:text-gray-600" />
         <LuFacebook className="cursor-pointer hover:text-gray-600" />

@@ -10,7 +10,7 @@ const MortgageLanding = () => {
   return (
     <>
       <div className="h-screen w-full flex flex-col">
-        {/* Header Section */}
+
         <div className="h-1/6 flex items-end justify-center">
           <div className="bg-gray-300 h-[2%] rounded-full w-[50%] flex items-center justify-center">
             <div className="h-12 w-12 rounded-full overflow-hidden shadow-lg">
@@ -23,13 +23,11 @@ const MortgageLanding = () => {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="h-5/6 flex flex-col items-center justify-start py-24 px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-semibold leading-snug">
             Hi, I'm Aquarious! <br /> Let's calculate your mortgage.
           </h1>
 
-          {/* Mortgage Calculator Button */}
           <div className="mt-10">
             <Link 
               href="/mortgage" 
@@ -40,7 +38,6 @@ const MortgageLanding = () => {
             </Link>
           </div>     
 
-          {/* Stats Section */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-8 max-w-3xl">
             <div className="text-center">
               <h1 className="text-3xl font-semibold">$100B</h1>
@@ -52,7 +49,6 @@ const MortgageLanding = () => {
             </div>
           </div>
 
-          {/* Unlock Benefits Section */}
           <div className="mt-8 bg-green-100 rounded-lg p-6 max-w-lg text-lg flex flex-col items-center gap-4 shadow-lg">
             <h1 className="font-semibold">After a few questions, you'll unlock:</h1>
             <div className="flex flex-col gap-2 text-left">

@@ -10,10 +10,9 @@ const Nav = () => {
   return (
     <>
       <div className='fixed h-20 w-full bg-customGreen text-white flex items-center justify-between px-6 md:px-12 lg:px-48 z-20'>
-        {/* Logo */}
+
         <Link href={'/'} className='text-3xl font-bold tracking-wide'>Aqua</Link>
 
-        {/* Desktop Menu */}
         <div className='hidden md:flex items-center gap-8'>
           <Link href={'#'} className='text-lg font-semibold'>Buy</Link>
           <Link href={'#'} className='text-lg font-semibold'>Refinance</Link>
@@ -22,7 +21,6 @@ const Nav = () => {
           <Link href={'/about'} className='text-lg font-semibold'>About us</Link>
         </div>
 
-        {/* Right Side */}
         <div className='hidden md:flex items-center gap-6'>
           <Link href={'#'} className='text-xl border-white border-[1.5px] p-2 rounded-full flex items-center justify-center'>
             <IoMdCall />
@@ -33,13 +31,12 @@ const Nav = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+  
         <button className='md:hidden text-3xl' onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <IoClose /> : <IoMenu />}
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       {menuOpen && (
         <div className='absolute top-20 left-0 w-full bg-customGreen text-white flex flex-col items-center gap-5 py-6 md:hidden'>
           <Link href={'#'} className='text-lg font-semibold'>Buy</Link>

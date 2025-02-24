@@ -25,25 +25,23 @@ export default function ReviewCard() {
 
   return (
     <div className="flex flex-col items-center justify-center mt-10 gap-5 h-[80vh] px-4">
-      {/* Review Card */}
+
       <div className="relative w-80 h-[80%] bg-white shadow-lg rounded-lg text-center overflow-hidden transition-all duration-500">
-        {/* Background Image */}
+
         <img
           src={selectedReview.img}
           alt={selectedReview.name}
           className="w-full h-full object-cover absolute"
         />
-        {/* Gradient Overlay */}
+ 
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         
-        {/* Review Text */}
         <div className="relative z-10 flex flex-col p-6 text-white">
           <p className="italic text-lg">"{selectedReview.review}"</p>
           <p className="mt-4 font-semibold text-lg">- {selectedReview.name}</p>
         </div>
       </div>
 
-      {/* Buttons */}
       <div className="flex flex-wrap gap-3 mt-6">
         {reviews.map((person, index) => (
           <button
